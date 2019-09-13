@@ -10,10 +10,10 @@ public class SpawnerWlosow : MonoBehaviour
     {
 
         const float coIle = 1f;
-        float x0 = -2f;
-        float x1 = 2f;
-        float y0 = -2f;
-        float y1 = 2f;
+        float x0 = -3f;
+        float x1 = 3f;
+        float y0 = -3f;
+        float y1 = 3f;
         float x = x0;
         float y = y0;
         while (y < y1)

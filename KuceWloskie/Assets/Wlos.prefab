@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b8f3027f6a16047a647ff6c081c3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iloscKawalkow: 20
-  iloscIteracji: 8
+  iloscKawalkow: 15
+  iloscIteracji: 4
   blokada: 0
   odlegloscKawalkow: 1.03
   kawalekWlosaObject: {fileID: 2075863657546900580, guid: 27352c8b01ef7e643bb7ac1d25b37dd6,

@@ -53,23 +53,28 @@ public class WlosScript : MonoBehaviour
     void FixedUpdate()
     {
         //return;
-        // pierwsza
-
+        Rigidbody jeden = null;
+        Rigidbody dwa = null;
+        Vector3 q;
+        Vector3 w;
+        foreach(Transform kawalek in transform)
+        {
+            kawalek.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        }
         for (int i = 0; i < iloscIteracji; ++i)
         {
-            Rigidbody jeden = null;
-            Rigidbody dwa = null;
+            jeden = null;
+            dwa = null;
             foreach (Transform kawalek in transform)
             {
                 jeden = dwa;
                 dwa = kawalek.GetComponent<Rigidbody>();
-                dwa.angularVelocity = Vector3.zero;
                 if (jeden == null)
                 {
                     continue;
                 }
-                Vector3 q = jeden.transform.localPosition;
-                Vector3 w = dwa.transform.localPosition;
+                q = jeden.transform.localPosition;
+                w = dwa.transform.localPosition;
                 float odleglosc = (w - q).magnitude;
                 Vector3 wersor = (w - q).normalized;
                 if (odleglosc > odlegloscKawalkow)
@@ -83,13 +88,10 @@ public class WlosScript : MonoBehaviour
                         //jeden.AddForce(zmiana * 0.05f);
                         jeden.velocity = sredniaPredkosc;
                     }
-                    if (!dwa.isKinematic)
-                    {
-                        dwa.transform.localPosition -= zmiana;
-                        //dwa.velocity -= zmiana / Time.deltaTime;
-                        //dwa.AddForce(-zmiana * 0.05f);
-                        dwa.velocity = sredniaPredkosc;
-                    }
+                    dwa.transform.localPosition -= zmiana;
+                    //dwa.velocity -= zmiana / Time.deltaTime;
+                    //dwa.AddForce(-zmiana * 0.05f);
+                    dwa.velocity = sredniaPredkosc;
                 }
             }
         }
