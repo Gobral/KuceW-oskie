@@ -7,8 +7,9 @@ public class WlosScript : MonoBehaviour
     const int MAX_ILOSC_KAWALKOW = 20000;
 
     public int iloscKawalkow = 20;
-    public int iloscIteracji = 30;
-    public float odlegloscKawalkow = 1.0f + 0.05f;
+    public int iloscIteracji = 8;
+    public bool blokada = false;
+    public float odlegloscKawalkow = 1.0f + 0.03f;
     public Rigidbody kawalekWlosaObject;
 
     private bool isNew = true;
@@ -34,6 +35,11 @@ public class WlosScript : MonoBehaviour
         //kawalek.transform.localRotation = transform.localRotation;
         Vector3 przesuniecie = transform.localRotation * (Vector3.up * odlegloscKawalkow * (ktory + 0.5f));
         kawalek.transform.localPosition = przesuniecie;
+
+        if (blokada && ktory == 0)
+        {
+            kawalek.isKinematic = true;
+        }
     }
 
 
@@ -47,6 +53,8 @@ public class WlosScript : MonoBehaviour
     void FixedUpdate()
     {
         //return;
+        // pierwsza
+
         for (int i = 0; i < iloscIteracji; ++i)
         {
             Rigidbody jeden = null;
@@ -55,6 +63,7 @@ public class WlosScript : MonoBehaviour
             {
                 jeden = dwa;
                 dwa = kawalek.GetComponent<Rigidbody>();
+                dwa.angularVelocity = Vector3.zero;
                 if (jeden == null)
                 {
                     continue;
@@ -65,11 +74,22 @@ public class WlosScript : MonoBehaviour
                 Vector3 wersor = (w - q).normalized;
                 if (odleglosc > odlegloscKawalkow)
                 {
-                    Vector3 zmiana = (odleglosc - odlegloscKawalkow) * wersor / 2.0f / 4.0f;
-                    jeden.transform.localPosition += zmiana;
-                    dwa.transform.localPosition -= zmiana;
-                    //jeden.AddForce(zmiana);
-                    //dwa.AddForce(-zmiana);
+                    Vector3 zmiana = (odleglosc - odlegloscKawalkow) * wersor / 2.0f;
+                    Vector3 sredniaPredkosc = (jeden.velocity + dwa.velocity) * 0.5f;
+                    if (!jeden.isKinematic)
+                    {
+                        jeden.transform.localPosition += zmiana;
+                        //jeden.velocity += zmiana / Time.deltaTime;
+                        //jeden.AddForce(zmiana * 0.05f);
+                        jeden.velocity = sredniaPredkosc;
+                    }
+                    if (!dwa.isKinematic)
+                    {
+                        dwa.transform.localPosition -= zmiana;
+                        //dwa.velocity -= zmiana / Time.deltaTime;
+                        //dwa.AddForce(-zmiana * 0.05f);
+                        dwa.velocity = sredniaPredkosc;
+                    }
                 }
             }
         }
