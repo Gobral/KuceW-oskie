@@ -9,7 +9,8 @@ public class WlosScript : MonoBehaviour
     public int iloscKawalkow = 20;
     public int iloscIteracji = 8;
     public bool blokada = false;
-    public float odlegloscKawalkow = 1.0f + 0.03f;
+    public float odlegloscKawalkow = 4.0f;
+    public float odlegloscKawalkowPrzyciaganie = 4.0f + 0.12f;
     public Rigidbody kawalekWlosaObject;
 
     private bool isNew = true;
@@ -49,10 +50,19 @@ public class WlosScript : MonoBehaviour
         
     }
 
+    void StabilizujKawalek(Transform kawalek)
+    {
+        Transform duzy = kawalek.GetChild(0);
+
+
+    }
+
+
     // Update is called once per frame
     void FixedUpdate()
     {
         //return;
+        return;
         Rigidbody jeden = null;
         Rigidbody dwa = null;
         Vector3 q;
@@ -60,6 +70,7 @@ public class WlosScript : MonoBehaviour
         foreach(Transform kawalek in transform)
         {
             kawalek.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
         }
         for (int i = 0; i < iloscIteracji; ++i)
         {
@@ -77,9 +88,9 @@ public class WlosScript : MonoBehaviour
                 w = dwa.transform.localPosition;
                 float odleglosc = (w - q).magnitude;
                 Vector3 wersor = (w - q).normalized;
-                if (odleglosc > odlegloscKawalkow)
+                if (odleglosc > odlegloscKawalkowPrzyciaganie)
                 {
-                    Vector3 zmiana = (odleglosc - odlegloscKawalkow) * wersor / 2.0f;
+                    Vector3 zmiana = (odleglosc - odlegloscKawalkowPrzyciaganie) * wersor / 2.0f;
                     Vector3 sredniaPredkosc = (jeden.velocity + dwa.velocity) * 0.5f;
                     if (!jeden.isKinematic)
                     {
