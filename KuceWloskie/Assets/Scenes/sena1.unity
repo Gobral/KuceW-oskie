@@ -692,6 +692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1865560379}
   - component: {fileID: 1865560380}
+  - component: {fileID: 1865560381}
   m_Layer: 0
   m_Name: Gracz
   m_TagString: Player
@@ -729,6 +730,18 @@ MonoBehaviour:
   czas: 5
   punktyTMP: {fileID: 1437320516}
   czasTMP: {fileID: 930252253}
+--- !u!114 &1865560381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865560378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3999e35478e5cf469220aed37ca80e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1942098692
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +845,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.373
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2

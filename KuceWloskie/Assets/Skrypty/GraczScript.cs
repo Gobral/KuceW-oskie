@@ -31,13 +31,8 @@ public class GraczScript : MonoBehaviour
         else {
 
         }
-        if(czasTemp - czas > 0.5f){
-            punkty += Random.Range(1, 100);
-            // Debug.Log(punkty);
-            AkyualizujPunkty();
-            czasTemp -= 0.5f;
-        }
         
+        NaliczPunkty();
     }
     void AkyualizujPunkty(){
         punktyTMP.text = "Rezultat: " + punkty;
@@ -47,6 +42,14 @@ public class GraczScript : MonoBehaviour
             czasTMP.text = "Czas: " + czas.ToString ("0.0");
         else{
             czasTMP.text = "Czas: 0";
+        }
+    }
+    void NaliczPunkty(){
+        if(czasTemp - czas > 0.5f){
+            punkty += Random.Range(1, 100);
+            // Debug.Log(punkty);
+            AkyualizujPunkty();
+            czasTemp -= 0.5f;
         }
     }
 }
