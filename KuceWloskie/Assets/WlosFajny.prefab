@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RigidbodyMass: 1
-  ColliderRadius: 0.05
+  ColliderRadius: 0.06
   JointSpring: 0.1
   JointDamper: 30
   RotationOffset: {x: 0, y: 0, z: 0}
