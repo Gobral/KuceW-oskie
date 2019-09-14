@@ -28,8 +28,13 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: a65743d1670d3a642a3bd5c720682243,
         type: 3}
       propertyPath: m_Name
-      value: wlos2
+      value: WlosFajny
       objectReference: {fileID: 0}
+    - target: {fileID: -5744773718206639633, guid: a65743d1670d3a642a3bd5c720682243,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f96f0bced5a34244593e5ae62c7c7afb, type: 2}
     - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
         type: 3}
       propertyPath: m_LocalPosition.x
