@@ -9,7 +9,7 @@ public class WlosScript : MonoBehaviour
     public int iloscKawalkow = 20;
     //public int iloscIteracji = 8;
     public bool blokada = false;
-    public float odlegloscKawalkow = 0.2f;
+    public float odlegloscKawalkow = 0.25f;
     //public float odlegloscKawalkowPrzyciaganie = 4.0f + 0.12f;
     public Rigidbody kawalekWlosaObject;
 

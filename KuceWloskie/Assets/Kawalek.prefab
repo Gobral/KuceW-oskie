@@ -46,7 +46,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.075
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3827419139969040608
 Rigidbody:
@@ -78,22 +78,22 @@ ConfigurableJoint:
   m_ConnectedAnchor: {x: 0, y: 0.5, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
-  m_XMotion: 1
-  m_YMotion: 1
-  m_ZMotion: 1
+  m_XMotion: 0
+  m_YMotion: 0
+  m_ZMotion: 0
   m_AngularXMotion: 1
   m_AngularYMotion: 1
   m_AngularZMotion: 1
   m_LinearLimitSpring:
-    spring: 60
-    damper: 5.5
+    spring: 0
+    damper: 0
   m_LinearLimit:
     limit: 0.001
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
-    spring: 30
-    damper: 9
+    spring: 0
+    damper: 0
   m_LowAngularXLimit:
     limit: 0
     bounciness: 0
@@ -153,8 +153,8 @@ ConfigurableJoint:
   m_ProjectionAngle: 180
   m_ConfiguredInWorldSpace: 0
   m_SwapBodies: 0
-  m_BreakForce: 6000
-  m_BreakTorque: 1000
+  m_BreakForce: 20000
+  m_BreakTorque: 300
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
   m_MassScale: 1

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iloscKawalkow: 20
   blokada: 0
-  odlegloscKawalkow: 0.2
+  odlegloscKawalkow: 0.25
   kawalekWlosaObject: {fileID: 3827419139969040608, guid: 879f27d3f41beee4aae8233ec6918ff6,
     type: 3}
 --- !u!23 &-2552136152094594785
