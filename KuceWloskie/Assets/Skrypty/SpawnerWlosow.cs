@@ -9,11 +9,11 @@ public class SpawnerWlosow : MonoBehaviour
     void Start()
     {
 
-        const float coIle = 0.3f;
-        float x0 = -1f;
-        float x1 = 1f;
-        float y0 = -1f;
-        float y1 = 1f;
+        const float coIle = 0.09f;
+        float x0 = -0.4f;
+        float x1 = 0.2f;
+        float y0 = -0.4f;
+        float y1 = 0.2f;
         float x = x0;
         float y = y0;
         while (y < y1)
