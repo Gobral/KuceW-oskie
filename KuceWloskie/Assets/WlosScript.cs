@@ -7,16 +7,18 @@ public class WlosScript : MonoBehaviour
     const int MAX_ILOSC_KAWALKOW = 20000;
 
     public int iloscKawalkow = 20;
-    public int iloscIteracji = 8;
+    //public int iloscIteracji = 8;
     public bool blokada = false;
-    public float odlegloscKawalkow = 4.0f;
-    public float odlegloscKawalkowPrzyciaganie = 4.0f + 0.12f;
+    public float odlegloscKawalkow = 0.2f;
+    //public float odlegloscKawalkowPrzyciaganie = 4.0f + 0.12f;
     public Rigidbody kawalekWlosaObject;
 
     private bool isNew = true;
 
     private void Awake()
     {
+        Rigidbody jeden = null;
+        Rigidbody dwa = null;
         isNew = false;
         if (iloscKawalkow <= 0 || iloscKawalkow >= MAX_ILOSC_KAWALKOW)
         {
@@ -25,11 +27,22 @@ public class WlosScript : MonoBehaviour
         }
         for (int i = 0; i < iloscKawalkow; ++i)
         {
-            SpawnKawalka(i);
+            jeden = dwa;
+            dwa = SpawnKawalka(i);
+            if(jeden != null)
+            {
+                //Debug.Log("xd1");
+                dwa.GetComponent<ConfigurableJoint>().connectedBody = jeden;
+            }
+            else
+            {
+                //Debug.Log("xd2");
+                Destroy(dwa.GetComponent<ConfigurableJoint>());
+            }
         }
     }
 
-    void SpawnKawalka(int ktory)
+    Rigidbody SpawnKawalka(int ktory)
     {
         Rigidbody kawalek = Instantiate(kawalekWlosaObject, transform);
         // kawalek.transform.localPosition = transform.localPosition;
@@ -41,6 +54,7 @@ public class WlosScript : MonoBehaviour
         {
             kawalek.isKinematic = true;
         }
+        return kawalek;
     }
 
 
@@ -62,7 +76,7 @@ public class WlosScript : MonoBehaviour
     void FixedUpdate()
     {
         //return;
-        return;
+        return;/*
         Rigidbody jeden = null;
         Rigidbody dwa = null;
         Vector3 q;
@@ -105,6 +119,6 @@ public class WlosScript : MonoBehaviour
                     dwa.velocity = sredniaPredkosc;
                 }
             }
-        }
+        }*/
     }
 }

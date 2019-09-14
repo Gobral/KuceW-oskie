@@ -44,11 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b8f3027f6a16047a647ff6c081c3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iloscKawalkow: 15
-  iloscIteracji: 4
+  iloscKawalkow: 20
   blokada: 0
-  odlegloscKawalkow: 1.03
-  kawalekWlosaObject: {fileID: 2075863657546900580, guid: 27352c8b01ef7e643bb7ac1d25b37dd6,
+  odlegloscKawalkow: 0.2
+  kawalekWlosaObject: {fileID: 3827419139969040608, guid: 879f27d3f41beee4aae8233ec6918ff6,
     type: 3}
 --- !u!23 &-2552136152094594785
 MeshRenderer:
