@@ -9,7 +9,7 @@ public class SpawnerWlosow : MonoBehaviour
     void Start()
     {
 
-        const float coIle = 0.7f;
+        const float coIle = 0.3f;
         float x0 = -1f;
         float x1 = 1f;
         float y0 = -1f;
