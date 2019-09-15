@@ -992,13 +992,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 1
+  m_enableVertexGradient: 0
   m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 0.99607843, g: 1, b: 0.2509804, a: 1}
-    topRight: {r: 0.99607843, g: 1, b: 0.2509804, a: 1}
-    bottomLeft: {r: 0.98039216, g: 0.21568628, b: 0.078431375, a: 1}
-    bottomRight: {r: 0.98039216, g: 0.21568628, b: 0.078431375, a: 1}
+    topLeft: {r: 0, g: 1, b: 1, a: 1}
+    topRight: {r: 0, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 0, b: 0.8901961, a: 1}
+    bottomRight: {r: 1, g: 0, b: 0.8901961, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -2105,13 +2105,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 1
+  m_enableVertexGradient: 0
   m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 0.9811321, g: 0.21569785, b: 0.0786757, a: 1}
-    topRight: {r: 0.9811321, g: 0.21569785, b: 0.0786757, a: 1}
-    bottomLeft: {r: 0.99446243, g: 1, b: 0.25098038, a: 1}
-    bottomRight: {r: 0.99446243, g: 1, b: 0.25098038, a: 1}
+    topLeft: {r: 1, g: 0, b: 0.88915014, a: 1}
+    topRight: {r: 1, g: 0, b: 0.88915014, a: 1}
+    bottomLeft: {r: 0, g: 1, b: 1, a: 1}
+    bottomRight: {r: 0, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -3070,7 +3070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfa4bf5eea22ab48b8b820279355364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  czas: 5
+  czas: 60
   punktyTMP: {fileID: 1437320516}
   czasTMP: {fileID: 930252253}
 --- !u!114 &1865560381
