@@ -143,14 +143,18 @@ public class GraczScript : MonoBehaviour
     }
     void NaliczPunkty(){
         if(czasTemp - czas > 0.5f){
-            punkty += Random.Range(1, 100);
             // Debug.Log(punkty);
             AkyualizujPunkty();
             czasTemp -= 0.5f;
         }
+        if(czas > 0.01f){
+            punkty += Random.Range(1, 1000);
+        }
     }
     public void DodajPunkty(int pkt){
-        punkty += pkt;
+        if(czas > 0.01f){
+            punkty += pkt;
+        }
     }
     
 }
