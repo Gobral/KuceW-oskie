@@ -149,5 +149,8 @@ public class GraczScript : MonoBehaviour
             czasTemp -= 0.5f;
         }
     }
+    public void DodajPunkty(int pkt){
+        punkty += pkt;
+    }
     
 }
