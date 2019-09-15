@@ -6833,6 +6833,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   szczota: {fileID: 1656228800}
+  nacisk: 0
+  px3: 24
+  ix3: 14.48
+  dx3: 0.67
 --- !u!1 &1868112200
 GameObject:
   m_ObjectHideFlags: 0
