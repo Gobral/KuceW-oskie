@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RigidbodyMass: 0.1
-  ColliderRadius: 0.06
-  JointSpring: 0.2
+  ColliderRadius: 0.096
+  JointSpring: 0.24
   JointDamper: 27
   RotationOffset: {x: 0, y: 0, z: 0}
   PositionOffset: {x: 0, y: 0, z: 0}
@@ -37,41 +37,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f96f0bced5a34244593e5ae62c7c7afb, type: 2}
     - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
-        type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
@@ -88,6 +53,26 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a65743d1670d3a642a3bd5c720682243,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4855710143059599509, guid: a65743d1670d3a642a3bd5c720682243,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4855710143059599509, guid: a65743d1670d3a642a3bd5c720682243,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4855710143059599509, guid: a65743d1670d3a642a3bd5c720682243,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4855710143059599509, guid: a65743d1670d3a642a3bd5c720682243,
+        type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
