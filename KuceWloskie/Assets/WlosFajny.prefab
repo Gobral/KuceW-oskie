@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26aa40ab5d2cf7240a3cbe47fbc6565c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RigidbodyMass: 1
+  RigidbodyMass: 0.1
   ColliderRadius: 0.06
-  JointSpring: 0.1
-  JointDamper: 30
+  JointSpring: 0.2
+  JointDamper: 27
   RotationOffset: {x: 0, y: 0, z: 0}
   PositionOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &4176122604639844751
