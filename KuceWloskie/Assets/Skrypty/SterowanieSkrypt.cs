@@ -8,7 +8,7 @@ public class SterowanieSkrypt : MonoBehaviour
     public Rigidbody szczota;
     Scene scena;
     Camera silverChariot;
-    static Quaternion kout = Quaternion.AngleAxis(20.0f, Vector3.right) * Quaternion.AngleAxis(90.0f, Vector3.forward);
+    static Quaternion kout = Quaternion.AngleAxis(20.0f, Vector3.right) * Quaternion.AngleAxis(90.0f, Vector3.up) * Quaternion.AngleAxis(90.0f, Vector3.forward);
 
     public float nacisk = 0.0f;
 
@@ -70,6 +70,8 @@ public class SterowanieSkrypt : MonoBehaviour
 
     void SzczotaUstaw(Vector3 mycha)
     {
+        //szczota.transform.SetPositionAndRotation(MiejsceSzczoty(mycha), ObrotSczoty(mycha));
+        //return;
         Vector3 error = MiejsceSzczoty(mycha) - szczota.transform.position;
         integralV += error * Time.deltaTime;
         Vector3 diff = (error - errorWczesniej) / Time.deltaTime;
