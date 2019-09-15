@@ -590,8 +590,8 @@ Camera:
   m_GameObject: {fileID: 558139778}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.29547882, g: 0.62413955, b: 0.754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3419,10 +3419,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfa4bf5eea22ab48b8b820279355364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  czas: 60
+  czas: 5
   punktyTMP: {fileID: 1437320516}
   czasTMP: {fileID: 930252253}
   swiatlo: {fileID: 2069875858}
+  kamera: {fileID: 558139780}
   kucyk: {fileID: 1030970806}
 --- !u!114 &1865560381
 MonoBehaviour:

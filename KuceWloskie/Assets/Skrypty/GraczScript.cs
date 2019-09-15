@@ -12,6 +12,7 @@ public class GraczScript : MonoBehaviour
     public TextMeshProUGUI punktyTMP;
     public TextMeshProUGUI czasTMP;
     public Light swiatlo;
+    public Camera kamera;
 
     public Transform kucyk;
 
@@ -139,7 +140,10 @@ public class GraczScript : MonoBehaviour
         Color kolor = new Color(czerony/255f, zielony/255f, niebieski/255f);  
         punktyTMP.color = kolor;
         czasTMP.color = kolor;
-        swiatlo.color = new Color(Random.Range(0.7f, 1f), Random.Range(0.7f, 1f), Random.Range(0.7f, 1f));
+        Color sw_kolor = new Color(Random.Range(0.7f, 1f), Random.Range(0.7f, 1f), Random.Range(0.7f, 1f));
+        swiatlo.color = sw_kolor;
+        kamera.backgroundColor = sw_kolor;
+
     }
     void NaliczPunkty(){
         if(czasTemp - czas > 0.5f){
