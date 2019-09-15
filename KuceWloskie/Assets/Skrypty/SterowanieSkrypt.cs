@@ -64,8 +64,8 @@ public class SterowanieSkrypt : MonoBehaviour
 
     Vector3 MiejsceSzczoty(Vector3 mycha)
     {
-        return silverChariot.ScreenToWorldPoint(mycha + (silverChariot.nearClipPlane + 14.2f) * Vector3.forward) +
-            3.0f * nacisk * Vector3.forward;
+        return silverChariot.ScreenToWorldPoint(mycha + (silverChariot.nearClipPlane + 12.2f) * Vector3.forward) +
+            3.0f * nacisk * (silverChariot.transform.rotation * Vector3.forward);
     }
 
     void SzczotaUstaw(Vector3 mycha)
@@ -84,6 +84,6 @@ public class SterowanieSkrypt : MonoBehaviour
 
     Quaternion ObrotSczoty(Vector3 mycha)
     {
-        return Quaternion.AngleAxis(15.0f * nacisk, Vector3.right) * kout * silverChariot.transform.rotation;
+        return silverChariot.transform.rotation * Quaternion.AngleAxis(15.0f * nacisk, Vector3.right) * kout;
     }
 }

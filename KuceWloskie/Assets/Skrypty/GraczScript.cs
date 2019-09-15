@@ -13,6 +13,10 @@ public class GraczScript : MonoBehaviour
     public TextMeshProUGUI czasTMP;
     public Light swiatlo;
 
+    public Transform kucyk;
+
+    bool dziwnosc = false;
+    float ileDziwnosci = 0.0f;
 
     private float czerony, zielony, niebieski;
     private bool st_cz, st_zi, st_ni;
@@ -35,15 +39,34 @@ public class GraczScript : MonoBehaviour
         st_zi = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    void DziwneRzeczy()
     {
-        if(czas > 0){
-            AktualizujCzas();
-            czas -= Time.deltaTime;
-        }
-        else {
+        dziwnosc = true;
+        ileDziwnosci += Time.deltaTime;
 
+        if (kucyk)
+        {
+            float rand = Szybsze(1.0f / 120.0f * ileDziwnosci) * 5.0f;
+            float speed = Szybsze(1.0f / 240.0f * ileDziwnosci) * 12.0f;
+            rand = Random.Range(-rand, rand);
+            transform.RotateAround(kucyk.transform.position, new Vector3(rand, 1.0f, 0.0f).normalized, -180.0f / 24.0f * speed * Time.deltaTime);
+        }
+    }
+
+    float Szybsze(float x)
+    {
+        return x / Mathf.Sqrt(x * x + 1);
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        AktualizujCzas();
+        czas -= Time.deltaTime;
+
+        if(czas < -10.0f)
+        {
+            DziwneRzeczy();
         }
         
         NaliczPunkty();
@@ -53,11 +76,7 @@ public class GraczScript : MonoBehaviour
         punktyTMP.text = "Rezultat: " + punkty;
     }
     void AktualizujCzas(){
-        if(czas > 0.001f)
-            czasTMP.text = "Czas: " + czas.ToString ("0.0");
-        else{
-            czasTMP.text = "Czas: 0";
-        }
+        czasTMP.text = "Czas: " + (Mathf.Max(czas, 0.0f)).ToString ("0.0");
     }
     void ObliczKolory(){
         if(zmieniany_kolor == 1){
@@ -123,7 +142,7 @@ public class GraczScript : MonoBehaviour
         swiatlo.color = new Color(Random.Range(0.7f, 1f), Random.Range(0.7f, 1f), Random.Range(0.7f, 1f));
     }
     void NaliczPunkty(){
-        if(czasTemp - czas > 0.2f){
+        if(czasTemp - czas > 0.5f){
             punkty += Random.Range(1, 100);
             // Debug.Log(punkty);
             AkyualizujPunkty();
