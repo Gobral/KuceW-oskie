@@ -3073,6 +3073,7 @@ MonoBehaviour:
   czas: 60
   punktyTMP: {fileID: 1437320516}
   czasTMP: {fileID: 930252253}
+  swiatlo: {fileID: 2069875858}
 --- !u!114 &1865560381
 MonoBehaviour:
   m_ObjectHideFlags: 0
